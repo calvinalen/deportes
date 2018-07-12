@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="text-center">Lista de equipos</h2>
+    <p class="text-center">Listado de Lugares en Primer Puesto</p>  
+    <table class="table table-sm table-hover">
+      <tbody>
+          <tr>
+              <th>Nombre del Equipo</th>
+              <th>Categoria</th>
+              <th>Descripcion</th>
+              <th>Lugar de Origen </th>
+            </tr>
+          <tr *ngFor="let deporte of deportList">
+            
+             <td>{{deporte.name}}</td>
+           
+            <td>{{deporte.category}}</td>
+   
+            <td>{{deporte.descripcion}}</td>
+
+          <td>{{deporte.lugar}}</td>
+      </tr>
+    </tbody>
+    </table>
+
+  </div>
+</div>

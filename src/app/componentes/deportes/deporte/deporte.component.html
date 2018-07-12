@@ -1,0 +1,28 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <form #deportForm="ngForm" (ngSubmit)="onSubmit(deportForm)">
+    <input type="hidden" name="$key" #$key="ngModel"[(ngModel)]="deportesService.selectDeport.$key">
+      <div class="form-group">
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="deportesService.selectDeport.name" placeholder="Agregar Equipo Nombre">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="category" #category="ngModel" [(ngModel)]="deportesService.selectDeport.category" placeholder="Agregar Equipo category">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="descripcion" #descripcion="ngModel" [(ngModel)]="deportesService.selectDeport.descripcion" placeholder="Agregar descripcion">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="lugar" #lugar="ngModel" [(ngModel)]="deportesService.selectDeport.lugar" placeholder="Agregar lugar">
+      </div>
+<div class="form-group">
+  <button class="btn btn-primary" type="submit">
+<i class="fas fa-plus-circle"></i>
+Agregar Equipo deportivo
+  </button>
+  <button class="btn btn-secondary" type="reset"(click)="resetForm(deportForm)">
+    <i class="fas fa-sync-alt"></i>reset datos
+  </button>
+</div>
+    </form>
+  </div>
+</div>
